@@ -16,12 +16,12 @@ int main (void) {
     grau = rad * 0.29578;
     grau_final = rad * 57;
 
-    min_final = 60*grau;
+    min_final = 60 * grau;
 
     if (min_final > 60) {
-        min = (60*grau) - min_final;
+        min = (60 * grau) - min_final;
         min_final = min_final - 60;
-        seg_final = 60*min;
+        seg_final = 60 * min;
     }
     else {
         seg_final = 0;
