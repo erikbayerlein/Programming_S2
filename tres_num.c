@@ -13,11 +13,10 @@ int main (void) {
 
     int A[] = {x, y, z};
 
-    for (int i = 1; i <= 3; i++) {
+    for (int i = 2; i <= 3; i++) {
         aux = A[i];
         j = i - 1;
-        A[0] = aux;
-        while (aux < A[j]) {
+        while (j >= 1 && A[j] > aux) {
             A[j+1] = A[j];
             j--;
         }
