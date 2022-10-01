@@ -5,7 +5,7 @@ typedef struct ponto Ponto;
 /* Funções exportadas */
 
 /* Aloca e retorna um ponto com coordenadas (x,y) */
-Ponto* pto_cria(float x, float y);
+Ponto pto_cria();
 
 /* Libera a memória de um ponto previamente criado */
 void pto_libera(float* p);

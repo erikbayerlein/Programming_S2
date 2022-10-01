@@ -20,7 +20,8 @@ ex.:
 #include <stdio.h>
 #include <stdlib.h>
 
-char preencher_aluno (char *v, int n);
+void preencher_turma ();
+char preencher_aluno ();
 char preencher_mat (char *mat, char *v);
 void mostrar_mat (char *mat);
 void aprovados (char *mat);
@@ -31,71 +32,34 @@ struct aluno {
     float ap1;
     float ap2;
     float ap3;
+    float media;
 };
 
 typedef struct aluno Aluno;
 
 int main (void) {
     int n;
-    char *v;
-    char *mat;
+    void *v;
 
-    printf ("Digite quantos alunos há na turma: ");
+    printf ("Digite quantas alunos vocês gostaria de adicionar: ");
     scanf ("%d", &n);
 
-    v = (char*) malloc(n*sizeof(char));
-
-    if (v == NULL) {
-        printf("Memoria insuficiente.\n");
-        exit(1);
+    for (int i = 0; i <= n; i++) {
+        v = preencher_aluno ();
+        
     }
 
-    *v = preencher_aluno(v, n);
 
-
-    mat = (char*) malloc(n*sizeof(char));
-
-    if (mat == NULL) {
-        printf("Memoria insuficiente.\n");
-        exit(1);
-    }
-
-    mat = preencher_mat(mat, v);
     
-    mostrar_mat(mat);
-    aprovados(mat);
-
     return 0;
 }
 
 
-char preencher_aluno (char *v, int n) {
-    Aluno a;
-    char vet[5];
 
-    for (int i = 0; i < n; i++) {
-        printf ("Digite as informacoes a seguir do %d aluno: ")
 
-        printf ("Nome: ");
-        scanf ("%c\n", &a.nome);
-        
-        printf ("Matricula: ");
-        scanf ("%c\n", &a.matricula);
-        
-        printf ("Ap1: ");
-        scanf ("%c\n", &a.ap1);
-        
-        printf ("Ap2: ");
-        scanf ("%c\n", &a.ap2);
-        
-        printf ("Ap3: ");
-        scanf ("%c\n", &a.ap3);
+char preencher_aluno () {
 
         
     }
 
 
-
-
-    return v;
-}
